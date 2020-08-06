@@ -52,8 +52,8 @@ void setup()
 
 void loop()
 {
-  Efeito(5);
-  Efeito(4);
+  Efeito(11);
+  // Efeito(4);
   // Efeito(3);
 }
 
@@ -231,25 +231,136 @@ void E5()
 // #6: Pisca os andares inteiros, do 1 ao 3
 void E6()
 {
+  for (byte i = 0; i < 3; i++)
+  {
+    digitalWrite(LED[i][0], LOW);
+    for (byte ii = 0; ii < 100; ii++)
+    {
+      for (byte iii = 1; iii < 10; iii++)
+      {
+        digitalWrite(LED[i][iii], HIGH);
+        delayMicroseconds(100);
+        digitalWrite(LED[i][iii], LOW);
+      }
+    }
+
+    digitalWrite(LED[i][0], HIGH);
+  }
 }
 // #7: Pisca os andares inteiros, do 3 ao 1
 void E7()
 {
+  for (int i = 2; i >= 0; i--)
+  {
+    digitalWrite(LED[i][0], LOW);
+    for (byte ii = 0; ii < 100; ii++)
+    {
+      for (byte iii = 1; iii < 10; iii++)
+      {
+        digitalWrite(LED[i][iii], HIGH);
+        delayMicroseconds(100);
+        digitalWrite(LED[i][iii], LOW);
+      }
+    }
+
+    digitalWrite(LED[i][0], HIGH);
+  }
 }
-void E8() // #8: Pisca todos os LEDs da lateral esquerda a direita
+// #8: Pisca todos os LEDs da lateral esquerda a direita
+void E8()
 {
+  byte Vet1[3][3] = {{7, 8, 9}, {4, 5, 6}, {1, 2, 3}};
+  for (int i = 0; i < 3; i++)
+  {
+    for (int ii = 0; ii < 3; ii++)
+      digitalWrite(LED[0][Vet1[i][ii]], HIGH);
+    for (int iiii = 0; iiii < 300; iiii++)
+    {
+
+      for (int iii = 0; iii < 3; iii++)
+      {
+        digitalWrite(LED[iii][0], LOW);
+        delayMicroseconds(100);
+        digitalWrite(LED[iii][0], HIGH);
+      }
+    }
+
+    for (int ii = 0; ii < 3; ii++)
+      digitalWrite(LED[0][Vet1[i][ii]], LOW);
+    delay(15);
+  }
 }
 // #9: Pisca todos os LEDs da lateral direita a esquerda
 void E9()
 {
+  byte Vet1[3][3] = {{7, 8, 9}, {4, 5, 6}, {1, 2, 3}};
+  for (int i = 2; i >= 0; i--)
+  {
+    for (int ii = 0; ii < 3; ii++)
+      digitalWrite(LED[0][Vet1[i][ii]], HIGH);
+    for (int iiii = 0; iiii < 300; iiii++)
+    {
+
+      for (int iii = 0; iii < 3; iii++)
+      {
+        digitalWrite(LED[iii][0], LOW);
+        delayMicroseconds(100);
+        digitalWrite(LED[iii][0], HIGH);
+      }
+    }
+
+    for (int ii = 0; ii < 3; ii++)
+      digitalWrite(LED[0][Vet1[i][ii]], LOW);
+    delay(15);
+  }
 }
 // #10: Pisca todos os LEDs da frente para trás
 void E10()
 {
+  byte Vet1[3][3] = {{3, 6, 9}, {2, 5, 8}, {1, 4, 7}};
+  for (int i = 0; i < 3; i++)
+  {
+    for (int ii = 0; ii < 3; ii++)
+      digitalWrite(LED[0][Vet1[i][ii]], HIGH);
+    for (int iiii = 0; iiii < 300; iiii++)
+    {
+
+      for (int iii = 0; iii < 3; iii++)
+      {
+        digitalWrite(LED[iii][0], LOW);
+        delayMicroseconds(100);
+        digitalWrite(LED[iii][0], HIGH);
+      }
+    }
+
+    for (int ii = 0; ii < 3; ii++)
+      digitalWrite(LED[0][Vet1[i][ii]], LOW);
+    delay(15);
+  }
 }
 // #11: Pisca todos os LEDs de trás para frente
 void E11()
 {
+  byte Vet1[3][3] = {{3, 6, 9}, {2, 5, 8}, {1, 4, 7}};
+  for (int i = 2; i >= 0; i--)
+  {
+    for (int ii = 0; ii < 3; ii++)
+      digitalWrite(LED[0][Vet1[i][ii]], HIGH);
+    for (int iiii = 0; iiii < 300; iiii++)
+    {
+
+      for (int iii = 0; iii < 3; iii++)
+      {
+        digitalWrite(LED[iii][0], LOW);
+        delayMicroseconds(100);
+        digitalWrite(LED[iii][0], HIGH);
+      }
+    }
+
+    for (int ii = 0; ii < 3; ii++)
+      digitalWrite(LED[0][Vet1[i][ii]], LOW);
+    delay(15);
+  }
 }
 // #12: Os LEDs do 1 andar piscam de forma circular
 void E12()
