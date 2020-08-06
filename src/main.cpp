@@ -52,10 +52,10 @@ void setup()
 
 void loop()
 {
-  Efeito(17);
-  //Efeito(13);
-  // Efeito(4);
-  // Efeito(3);
+  for (byte i = 1; i < 18; i++)
+  {
+    Efeito(i);
+  }
 }
 
 void Acender(byte Andar, byte Luz, bool Estado)
@@ -414,9 +414,9 @@ void E14()
       for (int ii = 0; ii < 4; ii++)
       {
         digitalWrite(Vet1[i][ii], !Flag);
-        delay(30);
+        delay(20);
         digitalWrite(Vet1[i][ii], Flag);
-        delay(15);
+        delay(5);
       }
 
       digitalWrite(Vet1[i][0], !Flag);
@@ -438,9 +438,9 @@ void E15()
       for (int ii = 0; ii < 4; ii++)
       {
         digitalWrite(Vet1[i][ii], !Flag);
-        delay(30);
+        delay(20);
         digitalWrite(Vet1[i][ii], Flag);
-        delay(15);
+        delay(5);
       }
 
       digitalWrite(Vet1[i][0], !Flag);
@@ -462,9 +462,9 @@ void E16()
       for (int ii = 0; ii < 4; ii++)
       {
         digitalWrite(Vet1[i][ii], !Flag);
-        delay(30);
+        delay(20);
         digitalWrite(Vet1[i][ii], Flag);
-        delay(15);
+        delay(5);
       }
 
       digitalWrite(Vet1[i][0], !Flag);
@@ -486,9 +486,9 @@ void E17()
       for (int ii = 0; ii < 4; ii++)
       {
         digitalWrite(Vet1[i][ii], !Flag);
-        delay(30);
+        delay(20);
         digitalWrite(Vet1[i][ii], Flag);
-        delay(15);
+        delay(5);
       }
 
       digitalWrite(Vet1[i][0], !Flag);
