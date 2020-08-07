@@ -52,7 +52,7 @@ void setup()
 
 void loop()
 {
-  for (byte i = 1; i < 18; i++)
+  for (byte i = 14; i < 18; i++)
   {
     Efeito(i);
   }
@@ -402,10 +402,10 @@ void E13()
 // #14: Os LEDs piscam de forma circular da direita para esquerda
 void E14()
 {
-  byte Vet2[3][3] = {{2, 3, 4}, {7, 6, 5}, {8, 9, 10}};
+  byte Vet2[3][3] = {{LED[0][7], LED[0][8], LED[0][9]}, {LED[0][4], LED[0][5], LED[0][6]}, {LED[0][1], LED[0][2], LED[0][3]}};
   for (int iii = 0; iii < 3; iii++)
   {
-    byte Vet1[4][4] = {{13, Vet2[iii][0], Vet2[iii][1], Vet2[iii][2]}, {Vet2[iii][2], 13, 12, 11}, {11, Vet2[iii][2], Vet2[iii][1], Vet2[iii][0]}, {Vet2[iii][0], 11, 12, 13}};
+    byte Vet1[4][4] = {{LED[0][0], Vet2[iii][0], Vet2[iii][1], Vet2[iii][2]}, {Vet2[iii][2], LED[0][0], LED[1][0], LED[2][0]}, {11, Vet2[iii][2], Vet2[iii][1], Vet2[iii][0]}, {Vet2[iii][0], LED[2][0], LED[1][0], LED[0][0]}};
     bool Flag = HIGH;
     for (int i = 0; i < 4; i++)
     {
@@ -426,10 +426,10 @@ void E14()
 // #15: Os LEDs piscam de forma circular da esquerda para direita
 void E15()
 {
-  byte Vet2[3][3] = {{2, 3, 4}, {7, 6, 5}, {8, 9, 10}};
+  byte Vet2[3][3] = {{LED[0][7], LED[0][8], LED[0][9]}, {LED[0][4], LED[0][5], LED[0][6]}, {LED[0][1], LED[0][2], LED[0][3]}};
   for (int iii = 2; iii >= 0; iii--)
   {
-    byte Vet1[4][4] = {{13, Vet2[iii][0], Vet2[iii][1], Vet2[iii][2]}, {Vet2[iii][2], 13, 12, 11}, {11, Vet2[iii][2], Vet2[iii][1], Vet2[iii][0]}, {Vet2[iii][0], 11, 12, 13}};
+    byte Vet1[4][4] = {{LED[0][0], Vet2[iii][0], Vet2[iii][1], Vet2[iii][2]}, {Vet2[iii][2], LED[0][0], LED[1][0], LED[2][0]}, {11, Vet2[iii][2], Vet2[iii][1], Vet2[iii][0]}, {Vet2[iii][0], LED[2][0], LED[1][0], LED[0][0]}};
     bool Flag = HIGH;
     for (int i = 0; i < 4; i++)
     {
@@ -450,10 +450,10 @@ void E15()
 // #16: Os LEDs piscam de forma circular de frente para trás
 void E16()
 {
-  byte Vet2[3][3] = {{10, 5, 4}, {9, 6, 3}, {8, 7, 2}};
+  byte Vet2[3][3] = {{LED[0][3], LED[0][6], LED[0][9]}, {LED[0][2], LED[0][5], LED[0][8]}, {LED[0][1], LED[0][4], LED[0][7]}};
   for (int iii = 0; iii < 3; iii++)
   {
-    byte Vet1[4][4] = {{13, Vet2[iii][0], Vet2[iii][1], Vet2[iii][2]}, {Vet2[iii][2], 13, 12, 11}, {11, Vet2[iii][2], Vet2[iii][1], Vet2[iii][0]}, {Vet2[iii][0], 11, 12, 13}};
+    byte Vet1[4][4] = {{LED[0][0], Vet2[iii][0], Vet2[iii][1], Vet2[iii][2]}, {Vet2[iii][2], LED[0][0], LED[1][0], LED[2][0]}, {11, Vet2[iii][2], Vet2[iii][1], Vet2[iii][0]}, {Vet2[iii][0], LED[2][0], LED[1][0], LED[0][0]}};
     bool Flag = HIGH;
     for (int i = 0; i < 4; i++)
     {
@@ -474,10 +474,10 @@ void E16()
 // #17  Os LEDs piscam de forma circular de trás para feente
 void E17()
 {
-  byte Vet2[3][3] = {{10, 5, 4}, {9, 6, 3}, {8, 7, 2}};
+  byte Vet2[3][3] = {{LED[0][3], LED[0][6], LED[0][9]}, {LED[0][2], LED[0][5], LED[0][8]}, {LED[0][1], LED[0][4], LED[0][7]}};
   for (int iii = 2; iii >= 0; iii--)
   {
-    byte Vet1[4][4] = {{13, Vet2[iii][0], Vet2[iii][1], Vet2[iii][2]}, {Vet2[iii][2], 13, 12, 11}, {11, Vet2[iii][2], Vet2[iii][1], Vet2[iii][0]}, {Vet2[iii][0], 11, 12, 13}};
+    byte Vet1[4][4] = {{LED[0][0], Vet2[iii][0], Vet2[iii][1], Vet2[iii][2]}, {Vet2[iii][2], LED[0][0], LED[1][0], LED[2][0]}, {11, Vet2[iii][2], Vet2[iii][1], Vet2[iii][0]}, {Vet2[iii][0], LED[2][0], LED[1][0], LED[0][0]}};
     bool Flag = HIGH;
     for (int i = 0; i < 4; i++)
     {
