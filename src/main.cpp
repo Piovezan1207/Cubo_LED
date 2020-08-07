@@ -52,7 +52,7 @@ void setup()
 
 void loop()
 {
-  for (byte i = 14; i < 18; i++)
+  for (byte i = 1; i < 18; i++)
   {
     Efeito(i);
   }
